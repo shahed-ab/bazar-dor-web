@@ -35,3 +35,19 @@ export interface Category {
   nameBn: string;
   icon: string;
 }
+
+export interface ApiDatasetInfo {
+  count: number;
+  filterExample: string;
+  filterableFields: string[];
+  item: string;
+  list: string;
+}
+
+export interface ApiOverview {
+  datasets: {
+    categories: ApiDatasetInfo;
+    products: ApiDatasetInfo;
+  };
+  namespace: string;
+}
