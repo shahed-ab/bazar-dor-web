@@ -28,7 +28,7 @@ export default function PriceTicker({ products }: PriceTickerProps) {
             <Link
               key={`${p.id}-${p.slug}-${idx}`}
               href={`/product/${p.slug}`}
-              className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity text-xs sm:text-sm text-gray-800"
+              className="inline-flex items-center gap-2 hover:opacity-81 transition-opacity text-xs sm:text-sm text-gray-800"
             >
               <span className="text-sm shrink-0">{p.image || p.categoryIcon || '🌾'}</span>
               <span className="font-semibold text-gray-900">{p.nameBn}</span>
