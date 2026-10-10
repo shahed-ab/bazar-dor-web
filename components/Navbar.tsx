@@ -204,7 +204,7 @@ export default function Navbar({ categories = DEFAULT_CATEGORIES }: NavbarProps)
                 </Link>
                 <Link
                   href="/signup"
-                  className="px-4 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-semibold text-white bg-[#078A42] hover:bg-[#067337] rounded-xl shadow-sm hover:shadow transition-all duration-150"
+                  className="px-4 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold text-white bg-[#078A42] hover:bg-[#067337] rounded-xl shadow-sm hover:shadow transition-all duration-150"
                 >
                   সাইন আপ
                 </Link>
@@ -221,8 +221,8 @@ export default function Navbar({ categories = DEFAULT_CATEGORIES }: NavbarProps)
                 key={cat.id || cat.slug}
                 href={`/category/${cat.slug}`}
                 className={`whitespace-nowrap flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-150 shrink-0 ${isActive
-                    ? 'bg-[#078A42] text-white shadow-sm font-semibold'
-                    : 'text-gray-700 hover:text-[#078A42] hover:bg-white/80'
+                  ? 'bg-[#078A42] text-white shadow-sm font-semibold'
+                  : 'text-gray-700 hover:text-[#078A42] hover:bg-white/80'
                   }`}
               >
                 <span className="text-base">{cat.icon}</span>
