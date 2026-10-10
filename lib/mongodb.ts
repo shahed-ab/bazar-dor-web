@@ -19,8 +19,12 @@ declare global {
   var _mongoClient: MongoClient | undefined;
 }
 
+const mongoOptions = {
+  autoSelectFamily: false,
+};
+
 if (!global._mongoClient) {
-  global._mongoClient = new MongoClient(uri);
+  global._mongoClient = new MongoClient(uri, mongoOptions);
 }
 const client: MongoClient = global._mongoClient;
 
