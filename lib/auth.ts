@@ -8,7 +8,9 @@ export const auth = betterAuth({
   baseURL:
     process.env.BETTER_AUTH_URL ||
     process.env.NEXT_PUBLIC_APP_URL ||
-    'http://localhost:3000',
+    (process.env.NODE_ENV === 'production'
+      ? 'https://bazar-dor-web-gold.vercel.app'
+      : 'http://localhost:3000'),
   secret:
     process.env.BETTER_AUTH_SECRET ||
     'bazardor-secret-key-min-32-characters-safe-development-token',
