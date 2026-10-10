@@ -2,6 +2,8 @@ import { auth } from '@/lib/auth';
 import { toNextJsHandler } from 'better-auth/next-js';
 import { NextRequest, NextResponse } from 'next/server';
 
+export const runtime = 'nodejs';
+
 const handlers = toNextJsHandler(auth);
 
 export const GET = async (req: NextRequest) => {
