@@ -22,7 +22,7 @@ export default async function SignInPage() {
       <Navbar categories={categories} />
       <PriceTicker products={products} />
 
-      <main className="max-w-6xl mx-auto px-4 py-10 sm:py-14 flex-1 w-full flex items-center justify-center">
+      <main className="max-w-6xl mx-auto px-3 py-10 sm:py-15 flex-1 w-full flex items-center justify-center">
         <Suspense
           fallback={
             <div className="w-full max-w-md mx-auto bg-[#FBFDFA] rounded-3xl border border-[#E2E8DE] p-8 animate-pulse">
