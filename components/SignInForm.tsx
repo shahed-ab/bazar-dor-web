@@ -84,8 +84,11 @@ export default function SignInForm() {
       if (res?.error) {
         toast.error(res.error.message || `${provider === 'google' ? 'Google' : 'GitHub'} সাইন ইন ব্যর্থ হয়েছে`);
         setSocialLoading(null);
-      } else if (res?.data?.url) {
-        window.location.href = res.data.url;
+      } else {
+        const redirectUrl = (res?.data as { url?: string } | undefined)?.url || (res as { url?: string } | undefined)?.url;
+        if (redirectUrl) {
+          window.location.href = redirectUrl;
+        }
       }
     } catch {
       toast.error(`${provider === 'google' ? 'Google' : 'GitHub'} সাইন ইন ব্যর্থ হয়েছে`);

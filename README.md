@@ -14,8 +14,8 @@
 
 ## 🔗 Project Links
 
-- **Live Deployment:** [https://bazardor.vercel.app](https://bazardor.vercel.app) *(or your Vercel deployment URL)*
-- **GitHub Repository:** [https://github.com/shahed-ab/BazarDor](https://github.com/shahed-ab/BazarDor)
+- **Live Deployment:** [https://bazar-dor-web-gold.vercel.app](https://bazar-dor-web-gold.vercel.app)
+- **GitHub Repository:** [https://github.com/shahed-ab/bazar-dor-web](https://github.com/shahed-ab/bazar-dor-web)
 
 ---
 
@@ -191,13 +191,20 @@ npm run start
 To enable Google and GitHub social logins:
 
 ### GitHub OAuth App Setup:
-1. Navigate to **[GitHub Developer Settings](https://github.com/settings/developers)** > **OAuth Apps** > **New OAuth App**.
-2. **Homepage URL:** `http://localhost:3000` (or your production URL)
+1. Navigate to **[GitHub Developer Settings](https://github.com/settings/developers)** > **OAuth Apps** > select your app (or create **New OAuth App**).
+2. **Homepage URL:**
+   - Production: `https://bazar-dor-web-gold.vercel.app`
+   - Local: `http://localhost:3000`
 3. **Authorization callback URL:**
-   ```text
-   http://localhost:3000/api/auth/callback/github
-   ```
-4. Copy the **Client ID** and generate a **Client Secret**, then paste them into `.env.local`.
+   - For Production (Vercel):
+     ```text
+     https://bazar-dor-web-gold.vercel.app/api/auth/callback/github
+     ```
+   - For Local Development:
+     ```text
+     http://localhost:3000/api/auth/callback/github
+     ```
+4. Copy the **Client ID** and generate a **Client Secret**, then paste them into `.env.local` (and into Vercel Environment Variables).
 
 ### Google Cloud OAuth Setup:
 1. Navigate to **[Google Cloud Console Credentials](https://console.cloud.google.com/apis/credentials)**.

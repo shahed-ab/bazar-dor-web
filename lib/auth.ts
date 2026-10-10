@@ -38,6 +38,7 @@ export const auth = betterAuth({
     process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://bazar-dor-web-gold.vercel.app',
   ],
   plugins: [nextCookies()],
 });
