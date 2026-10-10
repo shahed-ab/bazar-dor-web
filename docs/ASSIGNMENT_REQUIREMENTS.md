@@ -9,8 +9,9 @@
 ---
 # API's
 
-## BASE_URL_1: https://api.api-store.workers.dev/api/bazardor
-## BASE_URL_2: https://api.abcz.workers.dev/api/bazardor (alternative)
+## PRIMARY_BASE_URL: https://openapi.programming-hero.com/api/bazardor (Official OpenAPI)
+## BASE_URL_1: https://api.api-store.workers.dev/api/bazardor (Cloudflare Worker 1)
+## BASE_URL_2: https://api.abcz.workers.dev/api/bazardor (Cloudflare Worker 2 - alternative)
 
 Endpoints:  
 **All Products:**

@@ -52,8 +52,10 @@
    - Tailored color palette matching natural organic produce themes (`#078A42` primary green, neutral backgrounds, subtle borders).
    - Full responsiveness across Mobile (390px+), Tablet (768px), and Desktop (1024px+).
 
-8. **Resilient API Architecture with Fallback:**
-   - Multi-tiered fetcher with automatic fallback to secondary Cloudflare Worker endpoints if the primary API fails.
+8. **Resilient API Architecture with Multi-Tier Fallback:**
+   - Powered by official Programming Hero OpenAPI (`https://openapi.programming-hero.com/api/bazardor`) as the primary endpoint.
+   - Multi-tiered fetcher with automatic fallback to secondary Cloudflare Worker endpoints if primary is unreachable or rate-limited.
+   - Built-in request abort timeouts (8s) and in-memory query fallbacks for seamless category and product retrieval.
 
 9. **Polished UX & Error Handling:**
    - Realistic skeleton loaders (`loading.tsx`), interactive toast notifications (`react-hot-toast`), retry-enabled error boundaries (`error.tsx`), and a custom 404 page (`not-found.tsx`).
