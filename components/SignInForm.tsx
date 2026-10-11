@@ -72,9 +72,20 @@ export default function SignInForm() {
   const handleSocialSignIn = async (provider: 'google' | 'github') => {
     setSocialLoading(provider);
     try {
-      const target = callbackURL.startsWith('http')
-        ? callbackURL
-        : `${window.location.origin}${callbackURL.startsWith('/') ? '' : '/'}${callbackURL}`;
+      let target = callbackURL;
+      if (target.startsWith('http://') || target.startsWith('https://')) {
+        try {
+          const parsed = new URL(target);
+          if (typeof window !== 'undefined' && parsed.origin === window.location.origin) {
+            target = parsed.pathname + parsed.search + parsed.hash;
+          }
+        } catch {
+          // ignore parsing error
+        }
+      }
+      if (!target.startsWith('/') && !target.startsWith('http')) {
+        target = `/${target}`;
+      }
 
       const res = await signIn.social({
         provider,
